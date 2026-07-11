@@ -1,0 +1,28 @@
+# Dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Local environment
+.env*
+!.env.example
+
+# Deployment
+.vercel
+
+# Ruflo/Codex session state
+.claude-flow/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

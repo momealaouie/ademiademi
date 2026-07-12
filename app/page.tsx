@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ContactForm } from "@/components/ContactForm";
 import { ArrowDown, ArrowUpRight } from "@/components/Icons";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
@@ -6,35 +7,35 @@ import { processSteps, services, siteConfig } from "@/lib/site";
 
 const galleryItems = [
   {
-    src: "/images/labeling.png",
+    src: "/images/labeling.webp",
     alt: "Etiketterade chokladtryfflar i transparenta påsar",
     label: "Etikettering",
     className: "work-card work-card--wide",
     sizes: "(max-width: 760px) 100vw, 65vw",
   },
   {
-    src: "/images/gift-box.png",
+    src: "/images/gift-box.webp",
     alt: "Presentask med flera sorters konfektyr",
     label: "Specialpaketering",
     className: "work-card work-card--square",
     sizes: "(max-width: 760px) 100vw, 35vw",
   },
   {
-    src: "/images/gift-wrap.png",
+    src: "/images/gift-wrap.webp",
     alt: "Monterat och inslaget presentpaket",
     label: "Montering",
     className: "work-card work-card--portrait",
     sizes: "(max-width: 760px) 100vw, 35vw",
   },
   {
-    src: "/images/jelly-bag.png",
+    src: "/images/jelly-bag.webp",
     alt: "Paketerad gelékonfektyr i transparent påse",
     label: "Paketering",
     className: "work-card work-card--tall",
     sizes: "(max-width: 760px) 100vw, 32vw",
   },
   {
-    src: "/images/chocolate-bag.png",
+    src: "/images/chocolate-bag.webp",
     alt: "Paketerade chokladkulor i transparent påse",
     label: "Ompackning",
     className: "work-card work-card--tall",
@@ -47,7 +48,7 @@ const structuredData = {
   "@type": "ProfessionalService",
   name: siteConfig.name,
   url: siteConfig.url,
-  image: `${siteConfig.url}/images/production.png`,
+  image: `${siteConfig.url}/images/production.webp`,
   email: siteConfig.email,
   telephone: "+46736528934",
   description: siteConfig.description,
@@ -88,7 +89,7 @@ export default function Home() {
                 <div className="button-row">
                   <a
                     className="button button--dark"
-                    href={`mailto:${siteConfig.email}?subject=Förfrågan om paketering, montering eller etikettering`}
+                    href="#kontaktformular"
                   >
                     Berätta om ert uppdrag
                     <ArrowUpRight />
@@ -103,7 +104,7 @@ export default function Home() {
 
             <figure className="hero__visual">
               <Image
-                src="/images/production.png"
+                src="/images/production.webp"
                 alt="Färdigpackade konfektyrhinkar redo för leverans"
                 fill
                 priority
@@ -215,7 +216,7 @@ export default function Home() {
         <section className="about" id="om-oss" aria-labelledby="about-title">
           <div className="about__image">
             <Image
-              src="/images/gift-box.png"
+              src="/images/gift-box.webp"
               alt="Färdigställd presentförpackning med konfektyr"
               fill
               quality={86}
@@ -255,15 +256,7 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <Reveal className="contact__action" delay={90}>
-              <a
-                className="contact__mail"
-                href={`mailto:${siteConfig.email}?subject=Nytt uppdrag till Ademi & Ademi`}
-              >
-                <span>{siteConfig.email}</span>
-                <ArrowUpRight />
-              </a>
-            </Reveal>
+            <ContactForm />
 
             <div className="contact-grid">
               <div>

@@ -198,19 +198,6 @@ button:focus-visible {
   border-bottom: 1px solid;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.reveal[data-visible="true"] {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .hero {
   padding-top: var(--header-height);
   background: var(--paper);
@@ -288,13 +275,6 @@ button:focus-visible {
 
 .hero__visual img {
   object-fit: cover;
-  filter: grayscale(1) contrast(1.05);
-  transition: filter 600ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.hero__visual:hover img {
-  filter: grayscale(0.15) contrast(1.02);
-  transform: scale(1.025);
 }
 
 .hero__visual figcaption {
@@ -310,7 +290,6 @@ button:focus-visible {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  backdrop-filter: blur(10px);
 }
 
 .trust-bar {

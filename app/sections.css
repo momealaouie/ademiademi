@@ -40,14 +40,6 @@
 .work-card img,
 .about__image img {
   object-fit: cover;
-  filter: grayscale(0.92) contrast(1.04);
-  transition: filter 500ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.work-card:hover img,
-.about:hover .about__image img {
-  filter: grayscale(0.08) contrast(1.02);
-  transform: scale(1.025);
 }
 
 .work-card--wide img {
@@ -72,7 +64,6 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  backdrop-filter: blur(10px);
 }
 
 .process {
@@ -204,37 +195,6 @@
   line-height: 1.6;
 }
 
-.contact__action {
-  display: flex;
-  align-items: flex-end;
-}
-
-.contact__mail {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-block: 28px;
-  color: var(--paper);
-  border-top: 1px solid #484844;
-  border-bottom: 1px solid #484844;
-  font-size: clamp(22px, 2.5vw, 42px);
-  letter-spacing: -0.035em;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.contact__mail svg {
-  width: clamp(28px, 3vw, 48px);
-  flex: none;
-  transition: transform 200ms ease;
-}
-
-.contact__mail:hover svg {
-  transform: translate(5px, -5px);
-}
-
 .contact-grid {
   grid-column: 1 / -1;
   display: grid;
@@ -336,9 +296,6 @@
     grid-template-columns: 1fr;
   }
 
-  .contact__action {
-    margin-top: 68px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -431,9 +388,3 @@
   }
 }
 
-@media (hover: none) {
-  .work-card img,
-  .about__image img {
-    filter: grayscale(0.2) contrast(1.02);
-  }
-}

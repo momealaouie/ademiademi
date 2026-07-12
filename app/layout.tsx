@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/images/production.png",
+        url: "/images/production.webp",
         width: 1280,
         height: 719,
         alt: "Paketerade produkter hos AB Ademi & Ademi",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Paketerat. Monterat. Klart.",
     description: siteConfig.description,
-    images: ["/images/production.png"],
+    images: ["/images/production.webp"],
   },
   icons: {
     icon: "/images/logo.png",

@@ -33,14 +33,16 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <a className={styles.brand} href="#top" aria-label="Ademi & Ademi, startsida">
-          <Image
-            className={styles.logo}
-            src="/images/logo.png"
-            alt=""
-            width={150}
-            height={150}
-            priority
-          />
+          <span className={styles.logoFrame}>
+            <Image
+              className={styles.logo}
+              src="/images/logo.png"
+              alt="Ademi & Ademi logotyp"
+              width={150}
+              height={150}
+              priority
+            />
+          </span>
           <span className={styles.brandText}>
             <strong>ADEMI & ADEMI</strong>
             <span>HELSINGBORG</span>
@@ -57,7 +59,7 @@ export function Header() {
 
         <a
           className={styles.headerCta}
-          href={`mailto:${siteConfig.email}?subject=Förfrågan till Ademi & Ademi`}
+          href="#kontaktformular"
         >
           Be om offert
           <ArrowUpRight />

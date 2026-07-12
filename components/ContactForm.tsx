@@ -67,25 +67,18 @@ export function ContactForm() {
       noValidate={false}
     >
       <div className={styles.grid}>
-        <label>
-          <span>Namn *</span>
-          <input
-            autoComplete="given-name"
-            maxLength={60}
-            name="Namn"
-            placeholder="Ditt namn"
-            required
-            type="text"
-          />
-        </label>
+        <p className={styles.requiredNotice}>
+          Namn, e-post, telefonnummer och företag är obligatoriska. Anteckningar
+          är valfritt.
+        </p>
 
-        <label>
-          <span>Efternamn *</span>
+        <label className={styles.fullWidth}>
+          <span>Namn och efternamn *</span>
           <input
-            autoComplete="family-name"
-            maxLength={60}
-            name="Efternamn"
-            placeholder="Ditt efternamn"
+            autoComplete="name"
+            maxLength={120}
+            name="Namn och efternamn"
+            placeholder="Ditt för- och efternamn"
             required
             type="text"
           />
@@ -137,12 +130,11 @@ export function ContactForm() {
         </label>
 
         <label className={styles.fullWidth}>
-          <span>Anteckningar *</span>
+          <span>Anteckningar (valfritt)</span>
           <textarea
             maxLength={1500}
             name="Anteckningar"
             placeholder="Berätta kort om produkt, volym och önskad tidsplan."
-            required
             rows={5}
           />
         </label>

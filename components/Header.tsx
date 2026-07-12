@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "@/components/Icons";
 import { siteConfig } from "@/lib/site";
 import styles from "./Header.module.css";
 
 const navigation = [
-  { href: "#tjanster", label: "Tjänster" },
-  { href: "#arbeten", label: "Vårt arbete" },
-  { href: "#process", label: "Så arbetar vi" },
-  { href: "#om-oss", label: "Om oss" },
+  { href: "/#tjanster", label: "Tjänster" },
+  { href: "/#arbeten", label: "Vårt arbete" },
+  { href: "/#process", label: "Så arbetar vi" },
+  { href: "/#om-oss", label: "Om oss" },
+  { href: "/samarbetspartners", label: "Samarbetspartners" },
 ] as const;
 
 export function Header() {
@@ -32,7 +34,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <a className={styles.brand} href="#top" aria-label="Ademi & Ademi, startsida">
+        <Link className={styles.brand} href="/" aria-label="Ademi & Ademi, startsida">
           <span className={styles.logoFrame}>
             <Image
               className={styles.logo}
@@ -47,23 +49,23 @@ export function Header() {
             <strong>ADEMI & ADEMI</strong>
             <span>HELSINGBORG</span>
           </span>
-        </a>
+        </Link>
 
         <nav className={styles.desktopNav} aria-label="Huvudmeny">
           {navigation.map((item) => (
-            <a href={item.href} key={item.href}>
+            <Link href={item.href} key={item.href}>
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <a
+        <Link
           className={styles.headerCta}
-          href="#kontaktformular"
+          href="/#kontaktformular"
         >
           Be om offert
           <ArrowUpRight />
-        </a>
+        </Link>
 
         <button
           aria-controls="mobile-navigation"
@@ -85,15 +87,15 @@ export function Header() {
       >
         <nav aria-label="Mobilmeny">
           {navigation.map((item, index) => (
-            <a href={item.href} key={item.href} onClick={() => setOpen(false)}>
+            <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>
               <span>0{index + 1}</span>
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a href="#kontakt" onClick={() => setOpen(false)}>
-            <span>05</span>
+          <Link href="/#kontakt" onClick={() => setOpen(false)}>
+            <span>06</span>
             Kontakt
-          </a>
+          </Link>
         </nav>
         <div className={styles.mobileContact}>
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>

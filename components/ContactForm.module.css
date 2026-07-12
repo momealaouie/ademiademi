@@ -9,6 +9,14 @@
   gap: 28px 20px;
 }
 
+.requiredNotice {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: #c8c8c2;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .grid label {
   min-width: 0;
   display: grid;
@@ -145,6 +153,10 @@
   }
 
   .fullWidth {
+    grid-column: 1;
+  }
+
+  .requiredNotice {
     grid-column: 1;
   }
 

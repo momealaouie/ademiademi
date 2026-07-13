@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${siteConfig.url}/samarbetspartners`,
+      url: `${siteConfig.url}/produkter`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,

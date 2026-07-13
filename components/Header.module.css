@@ -4,8 +4,9 @@
   z-index: 100;
   height: var(--header-height);
   color: var(--ink);
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 96%, white);
+  border-bottom: 2px solid var(--ink);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 8%);
 }
 
 .inner {
@@ -13,7 +14,7 @@
   height: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr);
+  grid-template-columns: minmax(96px, 1fr) auto minmax(220px, 1fr);
   align-items: center;
   gap: 32px;
 }
@@ -22,43 +23,26 @@
   width: max-content;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: inherit;
   text-decoration: none;
 }
 
 .logoFrame {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   flex: none;
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 
 .logo {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   object-fit: cover;
-  transform: scale(1.12);
-}
-
-.brandText {
-  display: grid;
-  gap: 4px;
-  line-height: 1;
-}
-
-.brandText strong {
-  font-size: 12px;
-  letter-spacing: 0.14em;
-}
-
-.brandText span {
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 0.22em;
+  mix-blend-mode: multiply;
+  transform: scale(1.18);
 }
 
 .desktopNav {
@@ -70,8 +54,8 @@
 .desktopNav a {
   position: relative;
   color: inherit;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-decoration: none;
 }
@@ -228,23 +212,12 @@
 
   .logoFrame,
   .logo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .brandText {
-    display: grid;
+    width: 58px;
+    height: 58px;
   }
 
   .headerCta {
     display: none;
   }
 
-  .brandText strong {
-    font-size: 10px;
-  }
-
-  .brandText span {
-    font-size: 8px;
-  }
 }

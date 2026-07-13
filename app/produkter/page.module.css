@@ -1,0 +1,159 @@
+.main {
+  padding-top: var(--header-height);
+}
+
+.hero {
+  padding-block: clamp(96px, 13vw, 190px);
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.hero h1 {
+  max-width: 1080px;
+  margin: 24px 0 42px;
+  font-size: clamp(62px, 10vw, 156px);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.84;
+}
+
+.intro {
+  max-width: 680px;
+  margin: 0;
+  color: #b5b5af;
+  font-size: clamp(18px, 1.7vw, 24px);
+  line-height: 1.55;
+}
+
+.productSection {
+  padding-block: clamp(88px, 10vw, 150px);
+  border-bottom: 1px solid var(--line);
+}
+
+.productSection:nth-of-type(odd) {
+  background: var(--surface);
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.35fr) 1fr;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: clamp(48px, 7vw, 90px);
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: clamp(46px, 7vw, 104px);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.7vw, 28px);
+}
+
+.card {
+  min-width: 0;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #e7e7e3;
+}
+
+.imageWrap img {
+  object-fit: cover;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.025);
+}
+
+.cardCopy {
+  position: relative;
+  min-height: 116px;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.cardCopy p,
+.cardCopy span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cardCopy h3 {
+  margin: 7px 60px 0 0;
+  font-size: clamp(20px, 1.7vw, 27px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.cardCopy span {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.contact {
+  padding-block: clamp(84px, 10vw, 150px);
+}
+
+.contact > div {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.contact h2 {
+  max-width: 900px;
+  margin: 22px 0 0;
+  font-size: clamp(48px, 7vw, 108px);
+  font-weight: 500;
+  letter-spacing: -0.067em;
+  line-height: 0.9;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact > div {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding-block: 90px;
+  }
+
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cardCopy h3 {
+    font-size: 26px;
+  }
+}

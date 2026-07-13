@@ -12,7 +12,7 @@ const navigation = [
   { href: "/#arbeten", label: "Vårt arbete" },
   { href: "/#process", label: "Så arbetar vi" },
   { href: "/#om-oss", label: "Om oss" },
-  { href: "/samarbetspartners", label: "Samarbetspartners" },
+  { href: "/produkter", label: "Produkter" },
 ] as const;
 
 export function Header() {
@@ -44,10 +44,6 @@ export function Header() {
               height={150}
               priority
             />
-          </span>
-          <span className={styles.brandText}>
-            <strong>ADEMI & ADEMI</strong>
-            <span>HELSINGBORG</span>
           </span>
         </Link>
 

@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ArrowDown, ArrowUpRight } from "@/components/Icons";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
+import { products } from "@/lib/products";
 import { processSteps, services, siteConfig } from "@/lib/site";
 
 const galleryItems = [
@@ -42,6 +43,8 @@ const galleryItems = [
     sizes: "(max-width: 760px) 100vw, 32vw",
   },
 ] as const;
+
+const featuredProducts = [products[0], products[9], products[13], products[20]];
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -186,11 +189,48 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="featured-products section-space" id="produkter" aria-labelledby="featured-products-title">
+          <div className="page-shell">
+            <Reveal className="section-heading section-heading--split">
+              <div>
+                <p className="eyebrow">03 / Produkter</p>
+                <h2 id="featured-products-title">Smaker från Balkan.</h2>
+              </div>
+              <p>
+                Vi distribuerar över 300 produkter på den skandinaviska marknaden.
+                Här är ett litet urval ur sortimentet.
+              </p>
+            </Reveal>
+
+            <div className="featured-products__grid">
+              {featuredProducts.map((product, index) => (
+                <Reveal className="featured-product" delay={index * 60} key={product.image}>
+                  <div className="featured-product__image">
+                    <Image
+                      src={product.image}
+                      alt={`${product.brand} ${product.name}`}
+                      fill
+                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+                    />
+                  </div>
+                  <p>{product.brand}</p>
+                  <h3>{product.name}</h3>
+                </Reveal>
+              ))}
+            </div>
+
+            <a className="button button--dark featured-products__link" href="/produkter">
+              Se alla produkter
+              <ArrowUpRight />
+            </a>
+          </div>
+        </section>
+
         <section className="process section-space" id="process" aria-labelledby="process-title">
           <div className="page-shell">
             <Reveal className="section-heading section-heading--split process__heading">
               <div>
-                <p className="eyebrow">03 / Så arbetar vi</p>
+                <p className="eyebrow">04 / Så arbetar vi</p>
                 <h2 id="process-title">Tydligt från start till mål.</h2>
               </div>
               <p>
@@ -225,17 +265,19 @@ export default function Home() {
           </div>
           <div className="about__content">
             <Reveal>
-              <p className="eyebrow">04 / Om oss</p>
+              <p className="eyebrow">05 / Om oss</p>
               <h2 id="about-title">En flexibel partner i Helsingborg.</h2>
               <p className="about__lead">
-                AB Ademi & Ademi hjälper företag att frigöra tid, yta och resurser
-                genom att ta hand om manuella arbetsmoment.
+                AB Ademi & Ademi grundades i Helsingborg 2010 och har sedan dess
+                vuxit från paketering av livsmedel till distribution av produkter
+                från Balkan.
               </p>
               <p>
-                Vi finns till hands vid tillfälliga produktionstoppar, platsbrist
-                och återkommande behov. Vårt arbetssätt är enkelt: tydliga
-                instruktioner, noggrant utförande och leverans enligt
-                överenskommelse.
+                I dag är vi distributör av produkter från Balkan till kunder i
+                hela Skandinavien. Sortimentet omfattar över 300 produkter och vi
+                kombinerar hög kvalitet med konkurrenskraftiga priser. Med lokal
+                förankring i Helsingborg och lång erfarenhet arbetar vi för att
+                vara en trygg och flexibel partner på den skandinaviska marknaden.
               </p>
               <a className="text-link text-link--line" href="#kontakt">
                 Starta en dialog
@@ -248,7 +290,7 @@ export default function Home() {
         <section className="contact section-dark" id="kontakt" aria-labelledby="contact-title">
           <div className="page-shell contact__inner">
             <Reveal className="contact__heading">
-              <p className="eyebrow">05 / Kontakt</p>
+              <p className="eyebrow">06 / Kontakt</p>
               <h2 id="contact-title">Har ni ett uppdrag på gång?</h2>
               <p>
                 Beskriv produkten, ungefärlig volym och önskad tidsplan. Vi

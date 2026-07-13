@@ -12,7 +12,7 @@ function validatePhone(input: HTMLInputElement) {
   const isValidLength = digitCount >= 7 && digitCount <= 15;
   input.setCustomValidity(
     input.value && !isValidLength
-      ? "Ange ett giltigt telefonnummer med 7–15 siffror."
+      ? "Ange ett giltigt telefonnummer med 7 till 15 siffror."
       : "",
   );
 }
@@ -68,7 +68,7 @@ export function ContactForm() {
     >
       <div className={styles.grid}>
         <p className={styles.requiredNotice}>
-          Namn, e-post, telefonnummer och företag är obligatoriska. Anteckningar
+          Namn, epost, telefonnummer och företag är obligatoriska. Anteckningar
           är valfritt.
         </p>
 
@@ -85,11 +85,11 @@ export function ContactForm() {
         </label>
 
         <label>
-          <span>E-post *</span>
+          <span>Epost *</span>
           <input
             autoComplete="email"
             maxLength={120}
-            name="E-post"
+            name="Epost"
             placeholder="namn@foretag.se"
             required
             type="email"
@@ -112,7 +112,7 @@ export function ContactForm() {
             pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\\+?[0-9() -]+"
             placeholder="+46 70 123 45 67"
             required
-            title="Ange ett giltigt telefonnummer med 7–15 siffror. Du kan även använda mellanslag, +, bindestreck och parenteser."
+            title="Ange ett giltigt telefonnummer med 7 till 15 siffror. Du kan även använda mellanslag, plus och parenteser."
             type="tel"
           />
         </label>

@@ -274,6 +274,7 @@
   color: var(--paper);
   font-size: 14px;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contact-grid a:hover {
@@ -427,7 +428,20 @@
   }
 
   .about__image {
-    min-height: 620px;
+    min-height: 420px;
+  }
+
+  .about__content {
+    padding: 72px 16px;
+  }
+
+  .about__content h2 {
+    margin-bottom: 34px;
+    font-size: clamp(43px, 13vw, 62px);
+  }
+
+  .contact__heading h2 {
+    font-size: clamp(48px, 15vw, 72px);
   }
 
   .contact-grid {

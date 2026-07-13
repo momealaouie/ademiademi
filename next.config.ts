@@ -15,11 +15,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/produkter",
-        destination: "/#arbeten",
-        permanent: true,
-      },
-      {
         source: "/v%C3%A5r-historia",
         destination: "/#om-oss",
         permanent: true,

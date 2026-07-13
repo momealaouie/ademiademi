@@ -5,7 +5,7 @@
   --muted: #666660;
   --line: #d9d9d2;
   --line-strong: #bdbdb6;
-  --header-height: 78px;
+  --header-height: 88px;
   --page-width: 1440px;
   --section-space: clamp(96px, 11vw, 180px);
 }

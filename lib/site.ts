@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "AB Ademi & Ademi",
   shortName: "Ademi & Ademi",
   description:
-    "Flexibla och kostnadseffektiva lösningar för paketering, montering och etikettering i Helsingborg.",
+    "Paketering, distribution, transport och logistik från Balkan till hela Sverige.",
   url: "https://www.ademiademi.com",
   email: "info@ademiademi.com",
   phoneDisplay: "+46 73 652 89 34",
@@ -31,6 +31,12 @@ export const services = [
     title: "Etikettering & sortering",
     text: "Applicering av etiketter, sortering och kontroll så att varorna är redo för nästa steg i leveranskedjan.",
     detail: "Tydliga instruktioner och konsekvent resultat.",
+  },
+  {
+    number: "04",
+    title: "Transport & logistik",
+    text: "Vi hämtar produkter från Balkan, transporterar dem till Sverige och hanterar logistiken hela vägen fram.",
+    detail: "Leverans till företag och återförsäljare i hela Sverige.",
   },
 ] as const;
 

@@ -140,7 +140,16 @@
 
 @media (max-width: 620px) {
   .hero {
-    padding-block: 90px;
+    padding-block: 76px;
+  }
+
+  .hero h1 {
+    margin-bottom: 30px;
+    font-size: clamp(52px, 16vw, 74px);
+  }
+
+  .intro {
+    font-size: 17px;
   }
 
   .heading {
@@ -155,5 +164,9 @@
 
   .cardCopy h3 {
     font-size: 26px;
+  }
+
+  .contact h2 {
+    font-size: clamp(44px, 14vw, 66px);
   }
 }

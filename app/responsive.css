@@ -64,7 +64,7 @@
   }
 
   .hero__visual {
-    min-height: 70svh;
+    min-height: min(68svh, 620px);
   }
 
   .service-row {
@@ -77,17 +77,39 @@
 }
 
 @media (max-width: 560px) {
+  :root {
+    --header-height: 76px;
+    --section-space: 76px;
+  }
+
+  .page-shell {
+    width: calc(100% - 28px);
+  }
+
+  .section-heading {
+    margin-bottom: 46px;
+  }
+
   .section-heading h2 {
-    font-size: clamp(46px, 14vw, 72px);
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  .hero__content {
+    gap: 38px;
+    padding-block: 42px 54px;
   }
 
   .hero h1 {
-    font-size: clamp(57px, 18.3vw, 88px);
+    font-size: clamp(52px, 17vw, 78px);
     line-height: 0.84;
   }
 
+  .hero__intro > p {
+    font-size: 17px;
+  }
+
   .hero__visual {
-    min-height: 520px;
+    min-height: 440px;
   }
 
   .trust-bar__inner {
@@ -97,8 +119,26 @@
   }
 
   .service-row {
-    grid-template-columns: 34px 1fr;
-    gap: 14px;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    padding-block: 32px;
+  }
+
+  .service-row h3 {
+    font-size: 31px;
+  }
+
+  .service-row__body p {
+    font-size: 16px;
+  }
+
+  .button-row,
+  .button {
+    width: 100%;
+  }
+
+  .button-row .text-link {
+    width: max-content;
   }
 }
 
@@ -114,6 +154,11 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 
 }

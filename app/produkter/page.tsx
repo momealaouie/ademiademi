@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const groups = [
-  { category: "Dryck", eyebrow: "Frutti", title: "Fruktdrycker" },
-  { category: "Chips", eyebrow: "Vipa", title: "Chips" },
-  { category: "Inlagt", eyebrow: "Bora Agro", title: "Inlagda grönsaker" },
+  { category: "Dryck", eyebrow: "Drycker", title: "Frutti" },
+  { category: "Chips", eyebrow: "Chips", title: "Vipa" },
+  { category: "Inlagt", eyebrow: "Inlagda grönsaker", title: "Bora Agro" },
 ] as const;
 
 export default function ProductsPage() {

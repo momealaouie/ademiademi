@@ -43,7 +43,7 @@
 }
 
 .work-card--wide img {
-  object-position: center 55%;
+  object-position: center 74%;
 }
 
 .work-card--portrait img {
@@ -545,6 +545,15 @@
 }
 
 @media (max-width: 540px) {
+  .process__heading {
+    row-gap: 42px;
+    margin-bottom: 64px;
+  }
+
+  .process__heading h2 {
+    line-height: 1.04;
+  }
+
   .featured-products__grid {
     grid-template-columns: 1fr;
   }

@@ -308,6 +308,10 @@ export default function Home() {
                 <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a>
               </div>
               <div>
+                <span>Mejla oss</span>
+                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              </div>
+              <div>
                 <span>Besök oss</span>
                 <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer">
                   {siteConfig.address}
@@ -322,6 +326,29 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="location" aria-labelledby="location-title">
+          <div className="location__heading page-shell">
+            <Reveal>
+              <p className="eyebrow">07 / Hitta hit</p>
+              <h2 id="location-title">Diabasgatan 15</h2>
+              <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer">
+                Öppna i Google Maps
+                <ArrowUpRight />
+              </a>
+            </Reveal>
+          </div>
+          <div className="location__map">
+            <iframe
+              allowFullScreen
+              aria-label={`Google Maps som visar ${siteConfig.address}`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={siteConfig.mapsEmbedUrl}
+              title={`Karta till ${siteConfig.address}`}
+            />
           </div>
         </section>
       </main>

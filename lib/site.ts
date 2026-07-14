@@ -8,7 +8,10 @@ export const siteConfig = {
   phoneDisplay: "+46 73 652 89 34",
   phoneHref: "tel:+46736528934",
   address: "Diabasgatan 15, 254 68 Helsingborg",
-  mapsUrl: "https://maps.app.goo.gl/SU9xut5jgPRWD2aP6",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Diabasgatan+15%2C+254+68+Helsingborg",
+  mapsEmbedUrl:
+    "https://www.google.com/maps?q=Diabasgatan+15,+254+68+Helsingborg&output=embed",
   instagramUrl: "https://www.instagram.com/ademiademiab/",
   instagramHandle: "@ademiademiab",
 } as const;

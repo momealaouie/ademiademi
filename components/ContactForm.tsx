@@ -36,6 +36,10 @@ export function ContactForm() {
 
     setSubmitState("sending");
     const formData = new FormData(form);
+    const senderEmail = formData.get("Epost");
+    if (typeof senderEmail === "string") {
+      formData.append("_replyto", senderEmail);
+    }
     formData.append("_subject", "Ny offertförfrågan från ademiademi.com");
     formData.append("_template", "table");
     formData.append("_captcha", "false");

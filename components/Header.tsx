@@ -12,8 +12,8 @@ const navigation = [
   { href: "/#arbeten", label: "Vårt arbete" },
   { href: "/#process", label: "Så arbetar vi" },
   { href: "/#om-oss", label: "Om oss" },
-  { href: "/produkter", label: "Produkter" },
   { href: "/#hitta-hit", label: "Var ligger vi" },
+  { href: "/produkter", label: "Produkter" },
 ] as const;
 
 export function Header() {

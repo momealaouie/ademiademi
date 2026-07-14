@@ -9,36 +9,36 @@ import { processSteps, services, siteConfig } from "@/lib/site";
 
 const galleryItems = [
   {
-    src: "/images/labeling.webp",
-    alt: "Etiketterade chokladtryfflar i transparenta påsar",
-    label: "Etikettering",
+    src: "/images/home-truffle-bags.webp",
+    alt: "Två färdigpackade påsar med pärontryfflar",
+    label: "Paketering",
     className: "work-card work-card--wide",
     sizes: "(max-width: 760px) 100vw, 65vw",
   },
   {
-    src: "/images/gift-box.webp",
-    alt: "Presentask med flera sorters konfektyr",
+    src: "/images/home-gift-box.webp",
+    alt: "Presentask med fyra sorters choklad och konfektyr",
     label: "Specialpaketering",
     className: "work-card work-card--square",
     sizes: "(max-width: 760px) 100vw, 35vw",
   },
   {
-    src: "/images/gift-wrap.webp",
-    alt: "Monterat och inslaget presentpaket",
-    label: "Montering",
+    src: "/images/home-gift-bag.webp",
+    alt: "Färdigmonterad presentpåse inslagen i cellofan",
+    label: "Presentinslagning",
     className: "work-card work-card--portrait",
     sizes: "(max-width: 760px) 100vw, 35vw",
   },
   {
-    src: "/images/jelly-bag.webp",
-    alt: "Paketerad gelékonfektyr i transparent påse",
+    src: "/images/home-jelly-bag.webp",
+    alt: "Färgglad gelékonfektyr i transparent påse",
     label: "Paketering",
     className: "work-card work-card--tall",
     sizes: "(max-width: 760px) 100vw, 32vw",
   },
   {
-    src: "/images/chocolate-bag.webp",
-    alt: "Paketerade chokladkulor i transparent påse",
+    src: "/images/home-chocolate-bag.webp",
+    alt: "Chokladkulor i transparent påse",
     label: "Ompackning",
     className: "work-card work-card--tall",
     sizes: "(max-width: 760px) 100vw, 32vw",
@@ -52,7 +52,7 @@ const structuredData = {
   "@type": "ProfessionalService",
   name: siteConfig.name,
   url: siteConfig.url,
-  image: `${siteConfig.url}/images/production.webp`,
+  image: `${siteConfig.url}/images/home-production-buckets.webp`,
   email: siteConfig.email,
   telephone: "+46736528934",
   description: siteConfig.description,
@@ -108,8 +108,8 @@ export default function Home() {
 
             <figure className="hero__visual">
               <Image
-                src="/images/production.webp"
-                alt="Färdigpackade konfektyrhinkar redo för leverans"
+                src="/images/home-production-buckets.webp"
+                alt="Färdigpackade konfektyrhinkar fyllda med blandat godis"
                 fill
                 priority
                 quality={88}
@@ -257,8 +257,8 @@ export default function Home() {
         <section className="about" id="om-oss" aria-labelledby="about-title">
           <div className="about__image">
             <Image
-              src="/images/gift-box.webp"
-              alt="Färdigställd presentförpackning med konfektyr"
+              src="/images/home-gift-box.webp"
+              alt="Färdigställd presentask med flera sorters choklad"
               fill
               quality={86}
               sizes="(max-width: 900px) 100vw, 50vw"

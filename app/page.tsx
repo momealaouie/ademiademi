@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ContactForm } from "@/components/ContactForm";
+import { Footer } from "@/components/Footer";
 import { ArrowDown, ArrowUpRight } from "@/components/Icons";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
@@ -268,7 +269,7 @@ export default function Home() {
               <p className="eyebrow">05 / Om oss</p>
               <h2 id="about-title">En flexibel partner i Helsingborg.</h2>
               <p className="about__lead">
-                AB Ademi & Ademi grundades i Helsingborg 2010 och har sedan dess
+                Ademi AB grundades i Helsingborg 2010 och har sedan dess
                 vuxit från paketering av livsmedel till distribution av produkter
                 från Balkan.
               </p>
@@ -329,7 +330,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="location" aria-labelledby="location-title">
+        <section className="location" id="hitta-hit" aria-labelledby="location-title">
           <div className="location__heading page-shell">
             <Reveal>
               <p className="eyebrow">07 / Hitta hit</p>
@@ -353,15 +354,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="page-shell footer__inner">
-          <a className="footer__brand" href="#top">
-            ADEMI <span>&</span> ADEMI
-          </a>
-          <p>Paketering · Distribution · Logistik</p>
-          <p>© {new Date().getFullYear()} AB Ademi & Ademi</p>
-        </div>
-      </footer>
+      <Footer />
 
       <script
         type="application/ld+json"

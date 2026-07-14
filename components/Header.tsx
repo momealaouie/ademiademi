@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { ArrowUpRight } from "@/components/Icons";
 import { siteConfig } from "@/lib/site";
 import styles from "./Header.module.css";
@@ -13,10 +13,25 @@ const navigation = [
   { href: "/#process", label: "Så arbetar vi" },
   { href: "/#om-oss", label: "Om oss" },
   { href: "/produkter", label: "Produkter" },
+  { href: "/#hitta-hit", label: "Var ligger vi" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
+
+  function handleBrandClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (window.location.pathname !== "/") return;
+
+    event.preventDefault();
+    setOpen(false);
+    document.getElementById("top")?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start",
+    });
+    window.history.replaceState(null, "", "#top");
+  }
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", open);
@@ -34,12 +49,17 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link className={styles.brand} href="/" aria-label="Ademi & Ademi, startsida">
+        <Link
+          className={styles.brand}
+          href="/#top"
+          aria-label="Ademi AB, gå högst upp på startsidan"
+          onClick={handleBrandClick}
+        >
           <span className={styles.logoFrame}>
             <Image
               className={styles.logo}
               src="/images/logo.png"
-              alt="Ademi & Ademi logotyp"
+              alt="Ademi AB logotyp"
               width={150}
               height={150}
               priority
@@ -89,7 +109,7 @@ export function Header() {
             </Link>
           ))}
           <Link href="/#kontakt" onClick={() => setOpen(false)}>
-            <span>06</span>
+            <span>07</span>
             Kontakt
           </Link>
         </nav>

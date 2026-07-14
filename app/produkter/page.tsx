@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "@/components/Icons";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { products } from "@/lib/products";
 import styles from "./page.module.css";
@@ -9,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Produkter",
   description:
-    "Upptäck ett urval av drycker, chips och inlagda produkter som distribueras av AB Ademi & Ademi.",
+    "Upptäck ett urval av drycker, chips och inlagda produkter som distribueras av Ademi AB.",
   alternates: { canonical: "/produkter" },
 };
 
@@ -88,15 +89,7 @@ export default function ProductsPage() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="page-shell footer__inner">
-          <Link className="footer__brand" href="/">
-            ADEMI <span>&</span> ADEMI
-          </Link>
-          <p>Över 300 produkter för den skandinaviska marknaden</p>
-          <p>© {new Date().getFullYear()} AB Ademi & Ademi</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

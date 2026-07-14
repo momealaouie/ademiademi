@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "AB Ademi & Ademi",
-  shortName: "Ademi & Ademi",
+  name: "Ademi AB",
+  shortName: "Ademi AB",
   description:
     "Paketering, distribution, transport och logistik från Balkan till hela Sverige.",
   url: "https://www.ademiademi.com",
@@ -9,9 +9,9 @@ export const siteConfig = {
   phoneHref: "tel:+46736528934",
   address: "Diabasgatan 15, 254 68 Helsingborg",
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Diabasgatan+15%2C+254+68+Helsingborg",
+    "https://www.google.com/maps/search/?api=1&query=56.077860%2C12.762297",
   mapsEmbedUrl:
-    "https://www.google.com/maps?q=Diabasgatan+15,+254+68+Helsingborg&output=embed",
+    "https://www.google.com/maps?q=56.077860,12.762297&z=19&output=embed",
   instagramUrl: "https://www.instagram.com/ademiademiab/",
   instagramHandle: "@ademiademiab",
 } as const;

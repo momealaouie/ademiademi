@@ -14,7 +14,7 @@
   height: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(96px, 1fr) auto minmax(220px, 1fr);
+  grid-template-columns: minmax(82px, 0.75fr) auto minmax(178px, 0.75fr);
   align-items: center;
   gap: 32px;
 }
@@ -48,13 +48,13 @@
 .desktopNav {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 2vw, 34px);
+  gap: clamp(14px, 1.45vw, 24px);
 }
 
 .desktopNav a {
   position: relative;
   color: inherit;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-decoration: none;

@@ -8,8 +8,8 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "AB Ademi & Ademi | Paketering, montering & etikettering",
-    template: "%s | AB Ademi & Ademi",
+    default: "Ademi AB | Paketering, montering & etikettering",
+    template: "%s | Ademi AB",
   },
   description: siteConfig.description,
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "etikettering",
     "ompackning",
     "manuella arbetsmoment",
-    "Ademi & Ademi",
+    "Ademi AB",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: "/images/production.webp",
         width: 1280,
         height: 719,
-        alt: "Paketerade produkter hos AB Ademi & Ademi",
+        alt: "Paketerade produkter hos Ademi AB",
       },
     ],
   },

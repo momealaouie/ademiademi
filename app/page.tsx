@@ -159,7 +159,7 @@ export default function Home() {
           <div className="page-shell">
             <Reveal className="section-heading section-heading--split">
               <div>
-                <p className="eyebrow">02 / I praktiken</p>
+                <p className="eyebrow">02 / Vårt arbete</p>
                 <h2 id="work-title">Från lösa delar till leveransklart.</h2>
               </div>
               <p>

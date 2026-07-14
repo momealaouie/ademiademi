@@ -1,9 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import "./sections.css";
 import "./responsive.css";
 import { siteConfig } from "@/lib/site";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -70,7 +77,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="sv">
-      <body>{children}</body>
+      <body className={manrope.variable}>{children}</body>
     </html>
   );
 }

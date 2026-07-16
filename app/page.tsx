@@ -45,7 +45,16 @@ const galleryItems = [
   },
 ] as const;
 
-const featuredProducts = [products[0], products[9], products[13], products[20]];
+const featuredProductKeys = new Set([
+  "Frutti:Persika",
+  "Vipa:Ketchup",
+  "Vipa:Grill",
+  "Bora Agro:Tomater",
+]);
+
+const featuredProducts = products.filter((product) =>
+  featuredProductKeys.has(`${product.brand}:${product.name}`),
+);
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -78,7 +87,7 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero__content page-shell">
             <div className="hero__copy">
-              <p className="eyebrow hero__eyebrow">Paketering · Distribution · Logistik</p>
+              <p className="eyebrow hero__eyebrow">Paketering · Montering · Distribution</p>
               <h1 id="hero-title">
                 <span>Paketerat.</span>
                 <span>Monterat.</span>
@@ -86,9 +95,8 @@ export default function Home() {
               </h1>
               <div className="hero__intro">
                 <p>
-                  Vi tar hand om paketering, transport och logistik. Produkter
-                  hämtas från Balkan, transporteras till Sverige och kan levereras
-                  vidare till kunder i hela landet.
+                  Vi tar hand om paketering, montering och etikettering samt
+                  distribuerar ett brett sortiment av produkter från Balkan.
                 </p>
                 <div className="button-row">
                   <a
@@ -136,7 +144,7 @@ export default function Home() {
             <Reveal className="section-heading section-heading--light">
               <p className="eyebrow">01 / Våra tjänster</p>
               <h2 id="services-title">
-                Från paketering till transport och leverans.
+                Från paketering till färdig produkt.
               </h2>
             </Reveal>
 
@@ -276,11 +284,10 @@ export default function Home() {
               <p>
                 I dag är vi distributör av produkter från Balkan till kunder i
                 hela Skandinavien. Sortimentet omfattar över 300 produkter och vi
-                kombinerar hög kvalitet med konkurrenskraftiga priser. Vi hämtar
-                varor från Balkan, ansvarar för transporten till Sverige och kan
-                leverera till företag och återförsäljare i hela landet. Med lokal
-                förankring i Helsingborg arbetar vi för att vara en trygg och
-                flexibel partner på den skandinaviska marknaden.
+                kombinerar hög kvalitet med konkurrenskraftiga priser. Vi erbjuder
+                sortimentet till företag och återförsäljare i hela landet. Med
+                lokal förankring i Helsingborg arbetar vi för att vara en trygg
+                och flexibel partner på den skandinaviska marknaden.
               </p>
               <a className="text-link text-link--line" href="#kontakt">
                 Starta en dialog

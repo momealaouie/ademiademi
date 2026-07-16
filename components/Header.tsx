@@ -20,6 +20,27 @@ const navigation = [
 export function Header() {
   const [open, setOpen] = useState(false);
 
+  function handleNavigationClick(
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) {
+    setOpen(false);
+
+    if (window.location.pathname !== "/" || !href.startsWith("/#")) return;
+
+    const section = document.getElementById(href.slice(2));
+    if (!section) return;
+
+    event.preventDefault();
+    section.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start",
+    });
+    window.history.pushState(null, "", href.slice(1));
+  }
+
   function handleBrandClick(event: MouseEvent<HTMLAnchorElement>) {
     if (window.location.pathname !== "/") return;
 
@@ -70,7 +91,11 @@ export function Header() {
 
         <nav className={styles.desktopNav} aria-label="Huvudmeny">
           {navigation.map((item) => (
-            <Link href={item.href} key={item.href}>
+            <Link
+              href={item.href}
+              key={item.href}
+              onClick={(event) => handleNavigationClick(event, item.href)}
+            >
               {item.label}
             </Link>
           ))}
@@ -104,7 +129,11 @@ export function Header() {
       >
         <nav aria-label="Mobilmeny">
           {navigation.map((item, index) => (
-            <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>
+            <Link
+              href={item.href}
+              key={item.href}
+              onClick={(event) => handleNavigationClick(event, item.href)}
+            >
               <span>0{index + 1}</span>
               {item.label}
             </Link>

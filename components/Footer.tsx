@@ -36,7 +36,7 @@ export function Footer() {
           </div>
 
           <p className="footer__descriptor">
-            Paketering · Distribution · Logistik
+            Paketering · Montering · Distribution
           </p>
         </div>
 

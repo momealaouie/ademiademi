@@ -14,6 +14,7 @@ const navigation = [
   { href: "/#om-oss", label: "Om oss" },
   { href: "/#hitta-hit", label: "Var ligger vi" },
   { href: "/produkter", label: "Produkter" },
+  { href: "/privacy-policy", label: "Privacy policy" },
 ] as const;
 
 export function Header() {
@@ -109,7 +110,7 @@ export function Header() {
             </Link>
           ))}
           <Link href="/#kontakt" onClick={() => setOpen(false)}>
-            <span>07</span>
+            <span>08</span>
             Kontakt
           </Link>
         </nav>

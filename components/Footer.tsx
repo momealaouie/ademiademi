@@ -25,6 +25,7 @@ export function Footer() {
             <Link href="/produkter">Produkter</Link>
             <Link href="/#kontakt">Kontakt</Link>
             <Link href="/#hitta-hit">Var ligger vi</Link>
+            <Link href="/privacy-policy">Privacy policy</Link>
           </nav>
 
           <div>

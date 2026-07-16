@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { ArrowUpRight } from "@/components/Icons";
 import { siteConfig } from "@/lib/site";
@@ -151,6 +152,11 @@ export function ContactForm() {
         tabIndex={-1}
         type="text"
       />
+
+      <p className={styles.privacyNotice}>
+        När du skickar formuläret behandlar vi dina uppgifter för att besvara din
+        förfrågan. Läs mer i vår <Link href="/privacy-policy">privacy policy</Link>.
+      </p>
 
       <div className={styles.footer}>
         <p>Fält markerade med * är obligatoriska.</p>

@@ -26,6 +26,17 @@ export function Header() {
   ) {
     setOpen(false);
 
+    if (!href.includes("#") && window.location.pathname === href) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+      });
+      return;
+    }
+
     if (window.location.pathname !== "/" || !href.startsWith("/#")) return;
 
     const section = document.getElementById(href.slice(2));

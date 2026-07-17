@@ -56,6 +56,27 @@ const featuredProducts = products.filter((product) =>
   featuredProductKeys.has(`${product.brand}:${product.name}`),
 );
 
+const credentials = [
+  {
+    src: "/images/award-industry-winner-2025.webp",
+    alt: "Inramat diplom som visar att AB Ademi & Ademi utsågs till Branschvinnare 2025",
+    title: "Branschvinnare 2025",
+    detail: "Ett kvitto på stark utveckling och ett resultat över branschens nivå.",
+  },
+  {
+    src: "/images/certificate-ip-food.webp",
+    alt: "Inramat certifikat för IP Livsmedel Grundcertifiering utfärdat till AB Ademi & Ademi",
+    title: "IP Livsmedel",
+    detail: "Grundcertifierad verksamhet med tydliga krav på livsmedelshantering.",
+  },
+  {
+    src: "/images/award-star-business-2026.webp",
+    alt: "Inramat Star Business Awards diplom till AB Ademi & Ademi 2026",
+    title: "Årets Award 2026",
+    detail: "Utmärkelse för målmedvetenhet, driv och entreprenörskap.",
+  },
+] as const;
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -297,10 +318,51 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="credentials section-space" aria-labelledby="credentials-title">
+          <div className="page-shell">
+            <Reveal className="section-heading section-heading--split">
+              <div>
+                <p className="eyebrow">06 / Kvalitet &amp; utmärkelser</p>
+                <h2 id="credentials-title">Resultat som syns.</h2>
+              </div>
+              <p>
+                Certifieringar och utmärkelser som bekräftar vårt fokus på
+                kvalitet, utveckling och ett noggrant utfört arbete.
+              </p>
+            </Reveal>
+
+            <div className="credentials__grid">
+              {credentials.map((credential, index) => (
+                <Reveal
+                  className="credential-card"
+                  delay={index * 70}
+                  key={credential.src}
+                >
+                  <figure>
+                    <div className="credential-card__image">
+                      <Image
+                        src={credential.src}
+                        alt={credential.alt}
+                        fill
+                        quality={90}
+                        sizes="(max-width: 760px) 100vw, 33vw"
+                      />
+                    </div>
+                    <figcaption>
+                      <h3>{credential.title}</h3>
+                      <p>{credential.detail}</p>
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="contact section-dark" id="kontakt" aria-labelledby="contact-title">
           <div className="page-shell contact__inner">
             <Reveal className="contact__heading">
-              <p className="eyebrow">06 / Kontakt</p>
+              <p className="eyebrow">07 / Kontakt</p>
               <h2 id="contact-title">Har ni ett uppdrag på gång?</h2>
               <p>
                 Beskriv produkten, ungefärlig volym och önskad tidsplan. Vi
@@ -340,7 +402,7 @@ export default function Home() {
         <section className="location" id="hitta-hit" aria-labelledby="location-title">
           <div className="location__heading page-shell">
             <Reveal>
-              <p className="eyebrow">07 / Hitta hit</p>
+              <p className="eyebrow">08 / Hitta hit</p>
               <h2 id="location-title">Diabasgatan 15</h2>
               <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer">
                 Öppna i Google Maps

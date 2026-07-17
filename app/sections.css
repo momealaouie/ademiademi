@@ -214,6 +214,56 @@
   margin-top: 25px;
 }
 
+.credentials {
+  background: var(--paper);
+}
+
+.credentials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 32px);
+}
+
+.credential-card figure {
+  height: 100%;
+  margin: 0;
+}
+
+.credential-card__image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.credential-card__image img {
+  object-fit: cover;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.credential-card:hover .credential-card__image img {
+  transform: scale(1.018);
+}
+
+.credential-card figcaption {
+  padding-top: 22px;
+}
+
+.credential-card h3 {
+  margin: 0 0 9px;
+  font-size: clamp(22px, 2vw, 31px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.credential-card p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
 .contact {
   padding-block: var(--section-space) 72px;
 }
@@ -494,6 +544,15 @@
 }
 
 @media (max-width: 760px) {
+  .credentials__grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .credential-card__image {
+    aspect-ratio: 4 / 5;
+  }
+
   .work-grid {
     grid-template-columns: 1fr 1fr;
   }

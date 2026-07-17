@@ -339,7 +339,13 @@ export default function Home() {
                   key={credential.src}
                 >
                   <figure>
-                    <div className="credential-card__image">
+                    <a
+                      className="credential-card__image"
+                      href={credential.src}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Öppna ${credential.title} i full storlek`}
+                    >
                       <Image
                         src={credential.src}
                         alt={credential.alt}
@@ -347,7 +353,11 @@ export default function Home() {
                         quality={90}
                         sizes="(max-width: 760px) 100vw, 33vw"
                       />
-                    </div>
+                      <span className="credential-card__zoom" aria-hidden="true">
+                        Öppna certifikat
+                        <ArrowUpRight />
+                      </span>
+                    </a>
                     <figcaption>
                       <h3>{credential.title}</h3>
                       <p>{credential.detail}</p>

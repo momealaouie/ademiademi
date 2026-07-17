@@ -232,8 +232,10 @@
 .credential-card__image {
   position: relative;
   aspect-ratio: 4 / 5;
+  display: block;
   overflow: hidden;
   background: var(--surface);
+  cursor: zoom-in;
 }
 
 .credential-card__image img {
@@ -243,6 +245,42 @@
 
 .credential-card:hover .credential-card__image img {
   transform: scale(1.018);
+}
+
+.credential-card__zoom {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 13px;
+  color: var(--paper);
+  background: rgb(11 11 11 / 88%);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.credential-card__zoom svg {
+  width: 15px;
+}
+
+.credential-card__image:hover .credential-card__zoom,
+.credential-card__image:focus-visible .credential-card__zoom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .credential-card__zoom {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .credential-card figcaption {

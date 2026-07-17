@@ -1,6 +1,8 @@
 :root {
   --paper: #f7f7f4;
   --surface: #ecece7;
+  --surface-strong: #e2e2dc;
+  --burgundy: #681d26;
   --ink: #0b0b0b;
   --muted: #666660;
   --line: #d9d9d2;
@@ -102,7 +104,7 @@ button:focus-visible {
 .eyebrow {
   margin: 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
   line-height: 1.2;
@@ -160,7 +162,7 @@ button:focus-visible {
   gap: 18px;
   padding: 15px 20px;
   border: 1px solid;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1;
@@ -192,7 +194,7 @@ button:focus-visible {
   align-items: center;
   gap: 10px;
   color: inherit;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-decoration: none;
@@ -304,7 +306,7 @@ button:focus-visible {
   padding: 16px 18px;
   color: var(--ink);
   background: color-mix(in srgb, var(--paper) 92%, transparent);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -325,7 +327,7 @@ button:focus-visible {
 .trust-bar span {
   position: relative;
   padding-left: 20px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -345,10 +347,11 @@ button:focus-visible {
 
 .services {
   padding-block: var(--section-space);
+  background: var(--burgundy);
 }
 
 .service-list {
-  border-top: 1px solid #383834;
+  border-top: 1px solid rgb(255 255 255 / 28%);
 }
 
 .service-row {
@@ -356,7 +359,7 @@ button:focus-visible {
   grid-template-columns: 74px minmax(260px, 0.85fr) minmax(340px, 1.15fr);
   gap: clamp(24px, 4vw, 70px);
   padding-block: clamp(34px, 4vw, 58px);
-  border-bottom: 1px solid #383834;
+  border-bottom: 1px solid rgb(255 255 255 / 28%);
 }
 
 .service-row h3,
@@ -368,8 +371,8 @@ button:focus-visible {
 
 .service-row__number {
   padding-top: 8px;
-  color: #84847f;
-  font-size: 10px;
+  color: #d7b8bc;
+  font-size: 13px;
   letter-spacing: 0.15em;
 }
 
@@ -389,14 +392,14 @@ button:focus-visible {
 
 .service-row__body p {
   margin: 0;
-  color: #d0d0ca;
+  color: #f0e4e5;
   font-size: clamp(16px, 1.4vw, 20px);
   line-height: 1.55;
 }
 
 .service-row__body span {
-  color: #7f7f7a;
-  font-size: 10px;
+  color: #d7b8bc;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;

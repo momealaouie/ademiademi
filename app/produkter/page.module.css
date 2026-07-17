@@ -87,7 +87,7 @@
 .cardCopy span {
   margin: 0;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -109,6 +109,7 @@
 
 .contact {
   padding-block: clamp(84px, 10vw, 150px);
+  background: var(--surface);
 }
 
 .contact > div {

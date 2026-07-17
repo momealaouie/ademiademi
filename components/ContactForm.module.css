@@ -12,8 +12,8 @@
 .requiredNotice {
   grid-column: 1 / -1;
   margin: 0 0 4px;
-  color: #c8c8c2;
-  font-size: 13px;
+  color: var(--muted);
+  font-size: 15px;
   line-height: 1.55;
 }
 
@@ -24,8 +24,8 @@
 }
 
 .grid label > span {
-  color: #9c9c96;
-  font-size: 9px;
+  color: var(--muted);
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -35,10 +35,10 @@
 .grid textarea {
   width: 100%;
   padding: 12px 0;
-  color: var(--paper);
+  color: var(--ink);
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #484844;
+  border-bottom: 1px solid var(--line-strong);
   border-radius: 0;
   font: inherit;
   outline: none;
@@ -52,12 +52,12 @@
 
 .grid input::placeholder,
 .grid textarea::placeholder {
-  color: #73736e;
+  color: #777771;
 }
 
 .grid input:focus,
 .grid textarea:focus {
-  border-color: var(--paper);
+  border-color: var(--ink);
 }
 
 .grid input:invalid:not(:placeholder-shown),
@@ -87,8 +87,8 @@
 
 .footer p {
   margin: 0;
-  color: #7f7f79;
-  font-size: 10px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .footer button {
@@ -98,10 +98,10 @@
   justify-content: center;
   gap: 18px;
   padding: 15px 20px;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--paper);
-  font-size: 10px;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -110,7 +110,7 @@
 }
 
 .footer button:hover:not(:disabled) {
-  color: var(--paper);
+  color: var(--ink);
   background: transparent;
 }
 
@@ -132,7 +132,7 @@
   max-width: 700px;
   margin: 22px 0 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 

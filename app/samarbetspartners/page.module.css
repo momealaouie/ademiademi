@@ -57,7 +57,7 @@
 .partner > span {
   padding-top: 8px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
@@ -80,7 +80,7 @@
 .partner .category {
   margin-top: 20px;
   color: var(--ink);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;

@@ -359,7 +359,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact section-dark" id="kontakt" aria-labelledby="contact-title">
+        <section className="contact" id="kontakt" aria-labelledby="contact-title">
           <div className="page-shell contact__inner">
             <Reveal className="contact__heading">
               <p className="eyebrow">07 / Kontakt</p>

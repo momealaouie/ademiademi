@@ -12,6 +12,7 @@ const navigation = [
   { href: "/#arbeten", label: "Vårt arbete" },
   { href: "/#process", label: "Så arbetar vi" },
   { href: "/#om-oss", label: "Om oss" },
+  { href: "/#kontakt", label: "Kontakt" },
   { href: "/#hitta-hit", label: "Var ligger vi" },
   { href: "/produkter", label: "Produkter" },
   { href: "/privacy-policy", label: "Privacy policy" },
@@ -149,10 +150,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/#kontakt" onClick={() => setOpen(false)}>
-            <span>08</span>
-            Kontakt
-          </Link>
         </nav>
         <div className={styles.mobileContact}>
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>

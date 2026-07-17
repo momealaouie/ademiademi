@@ -113,7 +113,7 @@
 }
 
 .process {
-  background: var(--surface);
+  background: var(--paper);
 }
 
 .process__heading {
@@ -215,7 +215,7 @@
 }
 
 .credentials {
-  background: var(--surface-strong);
+  background: var(--surface);
 }
 
 .credentials__grid {
@@ -341,7 +341,7 @@
 
 .location {
   padding-top: clamp(72px, 9vw, 130px);
-  background: var(--surface-strong);
+  background: var(--paper);
   scroll-margin-top: var(--header-height);
 }
 

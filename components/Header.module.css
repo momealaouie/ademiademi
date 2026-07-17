@@ -160,6 +160,8 @@
     opacity: 0;
     transform: translateY(-12px);
     transition: opacity 220ms ease, transform 220ms ease, visibility 220ms;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .mobilePanelOpen {
@@ -179,7 +181,7 @@
     padding-block: 13px;
     color: inherit;
     border-bottom: 1px solid #343434;
-    font-size: clamp(28px, 7vw, 46px);
+    font-size: clamp(25px, 6.5vw, 42px);
     letter-spacing: -0.04em;
     text-decoration: none;
   }

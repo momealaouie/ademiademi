@@ -35,6 +35,18 @@ body.menu-open {
   overflow: hidden;
 }
 
+.mobile-copy {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  overflow-wrap: break-word;
+}
+
 img {
   -webkit-user-drag: none;
   user-select: none;

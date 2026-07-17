@@ -692,7 +692,9 @@
 
   .about__content h2 {
     margin-bottom: 34px;
-    font-size: clamp(43px, 13vw, 62px);
+    font-size: clamp(38px, 12vw, 56px);
+    letter-spacing: -0.04em;
+    line-height: 1;
   }
 
   .contact-grid {
@@ -731,7 +733,9 @@
   }
 
   .contact__heading h2 {
-    font-size: clamp(48px, 15vw, 72px);
+    font-size: clamp(40px, 12.5vw, 60px);
+    letter-spacing: -0.045em;
+    line-height: 0.96;
   }
 
   .contact-grid {

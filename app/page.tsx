@@ -165,7 +165,8 @@ export default function Home() {
             <Reveal className="section-heading section-heading--light">
               <p className="eyebrow">01 / Våra tjänster</p>
               <h2 id="services-title">
-                Från paketering till färdig produkt.
+                <span className="desktop-copy">Från paketering till färdig produkt.</span>
+                <span className="mobile-copy">Från idé till färdig produkt.</span>
               </h2>
             </Reveal>
 
@@ -189,7 +190,10 @@ export default function Home() {
             <Reveal className="section-heading section-heading--split">
               <div>
                 <p className="eyebrow">02 / Vårt arbete</p>
-                <h2 id="work-title">Från lösa delar till leveransklart.</h2>
+                <h2 id="work-title">
+                  <span className="desktop-copy">Från lösa delar till leveransklart.</span>
+                  <span className="mobile-copy">Klart för leverans.</span>
+                </h2>
               </div>
               <p>
                 Varje uppdrag ser olika ut. Därför anpassar vi arbetsflöde,
@@ -296,7 +300,10 @@ export default function Home() {
           <div className="about__content">
             <Reveal>
               <p className="eyebrow">05 / Om oss</p>
-              <h2 id="about-title">En flexibel partner i Helsingborg.</h2>
+              <h2 id="about-title">
+                <span className="desktop-copy">En flexibel partner i Helsingborg.</span>
+                <span className="mobile-copy">Er partner i Helsingborg.</span>
+              </h2>
               <p className="about__lead">
                 Ademi AB grundades i Helsingborg 2010 och har sedan dess
                 vuxit från paketering av livsmedel till distribution av produkter
@@ -373,7 +380,10 @@ export default function Home() {
           <div className="page-shell contact__inner">
             <Reveal className="contact__heading">
               <p className="eyebrow">07 / Kontakt</p>
-              <h2 id="contact-title">Har ni ett uppdrag på gång?</h2>
+              <h2 id="contact-title">
+                <span className="desktop-copy">Har ni ett uppdrag på gång?</span>
+                <span className="mobile-copy">Uppdrag på gång?</span>
+              </h2>
               <p>
                 Beskriv produkten, ungefärlig volym och önskad tidsplan. Vi
                 återkommer med ett upplägg som passar er verksamhet.

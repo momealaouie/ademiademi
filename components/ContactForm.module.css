@@ -143,15 +143,21 @@
 
 .status p {
   margin: 0;
-  font-size: 13px;
 }
 
 .success {
-  color: #b9ddb9;
+  padding: 20px 22px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .error {
   color: #e3a2a2;
+  font-size: 14px;
 }
 
 @media (max-width: 960px) {

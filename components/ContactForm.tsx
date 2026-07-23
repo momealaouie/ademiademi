@@ -42,7 +42,7 @@ export function ContactForm() {
       formData.append("_replyto", senderEmail);
     }
     formData.append("_subject", "Ny offertförfrågan från ademiademi.com");
-    formData.append("_template", "table");
+    formData.append("_template", "basic");
     formData.append("_captcha", "false");
 
     try {
@@ -137,7 +137,6 @@ export function ContactForm() {
         <label className={styles.fullWidth}>
           <span>Anteckningar (valfritt)</span>
           <textarea
-            maxLength={1500}
             name="Anteckningar"
             placeholder="Berätta kort om produkt, volym och önskad tidsplan."
             rows={5}
